@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Concrafter Soundboard - Pro</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="interstitial_ad_frequency">2</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6906000706399183/1101765628</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-6906000706399183/6900887211</string>
+
+
+    <string name="foldername">concrafterpro</string>
+
+    <string name="msgForPremium">Hol dir die Premium Version um neue Sounds zu bekommen</string>
+
+    <string name="rechtliches"> <b>INFO:</b>\n
+ Das Soundboard wurde nicht von ConCrafter erstellt, sondern von Fans von ihm.\nFalls er etwas gegen dieses Soundboard einzuwenden hat, sind wir jederzeit bereit es offline zu nehmen und stehen ihm bei Fragen, über Email, zur Verfügung.
+
+\n\n
+ <b>Impressum:</b>\nMica Grünewald\n\n\nmicagrnwld@gmail.com</string>
+
+
+
+
+</resources>
