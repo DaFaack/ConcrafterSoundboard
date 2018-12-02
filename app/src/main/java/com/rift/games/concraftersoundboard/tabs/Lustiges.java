@@ -1,4 +1,4 @@
-package com.greenwoods.productions.concraftersoundboard.tabs;
+package com.rift.games.concraftersoundboard.tabs;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -29,8 +29,8 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.greenwoods.productions.concraftersoundboard.MainActivity;
-import com.greenwoods.productions.concraftersoundboard.R;
+import com.rift.games.concraftersoundboard.MainActivity;
+import com.rift.games.concraftersoundboard.R;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -41,62 +41,53 @@ import java.io.OutputStream;
 /**
  * Created by Ratan on 7/29/2015.
  */
-public class Kommentare extends Fragment {
-
-
+public class Lustiges extends Fragment {
     GridView myGridView;
     int position;
     View layout;
-//    File soundfile;
-File directory;
-
-    int max;
-    public String[] items1 ={
-            "Ah", "Aha", "Alles Klar 1", "Alles klar 2", "Ach als ob", "Ding Dong", "Doch", "Ehm", "Ehm ehh", "Oh Guten Tag",
-            "Hallo", "Halts Maul 1", "Halts Maul 2", "Halts Maul 3", "Hi :D", "Hm", "*Hust*", "Hioou", "Naaa", "Naguut",
-            "Neiiin", "Niiiice", "Ohh 1", "Ohh 2", "Oh nee", "Okay", "OMG 1", "OMG 2", "Prima", "Richtig",
-            "Schei*e", "Suuper", "Tadaa! 1", "Tadaa! 2", "WIESO", "Wooow",
-            "Ähh", "Ahh 1", "Ahh 2", "Cool 1", "Cool 2", "Danke",
-            "Das macht sinn", "Hää?", "Hi", "Ja", "Na", "Nein",
-            "Ouh", "Tschau", "Und ja", "Warum", "was", "wie",
-            "yey", "alter wie geil", "alter wtf", "bastard", "haeee", "Heiiiy",
-            "ist cool", "Ich hab keine Ahnung", "kleinscheiß", "Korrekt digga", "Total dumm eigentlich", "Ultra gut",
-            "Wooow", "wtf"};
+    //    File soundfile;
+    File directory;
+    String filename;
+    public String[] items1 ={"Ahhh!", "Alpaka", "AAAALPAKAS", "Oh maaaan", "Atemlos durch die Nacht", "Currywurst reste", "6 Diamanten", "Hey Lutz!", "Hört auf zu Bohren!", "Ich chill hier nur",
+            "Ich sterbe", "Krankesgeräusch 1", "Krankesgeräusch 2", "Krankesgeräusch 3", "Krankesgeräusch 4", "Krankesgeräusch 5", "Krankesgeräusch 6", "Krankesgeräusch 7", "Krankesgeräusch 8", "Krankesgeräusch 9",
+            "Lache 1", "Lache 2", "Lache 3", "Wollt ihr n Maoam", "Nailed it", "Ohh", "Ouh toll", "Hey Luca", "Hey Slenderman", "So viele Diamanten",
+            "Ja man!", "Woop Woop Woop Woop",
+            "Flülingslollen", "Geil", "Gemüse", "Hund", "Katze", "Hahahaha", "*Heul*",
+            "Hilde gart", "Ich box dich gleich amina", "Ich jetzt oder wer?", "Was wollt ihr von mir alter", "Lache", "Lasst doch mal n like da", "PFERD!",
+            "Oke sorry", "Va-China", "Yeah waah", "übelster hunger", "DREISSIGTAUSEND LIKES", "Das ist nh drohne die man fliegen kann", "Du geiler hengst",
+            "Halt deine scheiß fresse alter", "Samma hört ihr mir nicht richtig zu?", "OMG", "Kann das bei mir mal kommen?", "Klöten", "HHHuhahah", "Amnamnam",
+            "Nase abbeissen", "Thats a Mülleimer", "Was ist das denn", "viel zu sehr unterbewertet", "Uooooah"};
 
     public static int[] soundfiles ={
-    /*5*/                           R.raw.ah,R.raw.aha, R.raw.alleskla, R.raw.allesklar, R.raw.alsob,
-    /*5*/                           R.raw.dingdong, R.raw.doch, R.raw.ehm, R.raw.ehmeh, R.raw.gutentag,
-    /*5*/                           R.raw.hallo, R.raw.haltsmaul, R.raw.haltsmaul1, R.raw.haltsmaul2, R.raw.hi,
-    /*5*/                           R.raw.hm, R.raw.hust, R.raw.jo, R.raw.naa, R.raw.nagut,
-    /*4*/                           R.raw.nein, R.raw.nice, R.raw.oh, R.raw.ohh,
-                                    R.raw.ohnee, R.raw.okay, R.raw.omg, R.raw.omg1, R.raw.prima,
-    /*4*/                           R.raw.richtig, R.raw.scheisse, R.raw.superr, R.raw.tada,
-                                    R.raw.tada1, R.raw.wieso, R.raw.wow, R.raw.aehnew,R.raw.ahhnew, R.raw.ahnew, R.raw.coolnew, R.raw.coolnew1,
-    /*5*/                           R.raw.dankenew, R.raw.dasmachtsinn, R.raw.heanew, R.raw.hinew, R.raw.janew,
-    /*5*/                           R.raw.nanew, R.raw.neinnew, R.raw.ouhnew, R.raw.tschaunew, R.raw.undjanew,
-    /*5*/                           R.raw.warumnew, R.raw.wasnew, R.raw.wienew, R.raw.yeynew, R.raw.xalterwiegeil,
-    /*4*/                           R.raw.xalterwtf, R.raw.xbastard, R.raw.xhaeeee, R.raw.xheiiiy,
-                                    R.raw.xistcool, R.raw.xkeineahnung, R.raw.xkleinscheiss, R.raw.xkorrektdiggah, R.raw.xtotaldumm,
-    /*4*/                           R.raw.xultragut, R.raw.xwow, R.raw.xwtf
+    /*5*/                           R.raw.aaaaaaaa,R.raw.alpaca, R.raw.alpacas, R.raw.aman, R.raw.atemlosdurchdienacht,
+    /*5*/                           R.raw.currywurstreste, R.raw.diamanten, R.raw.heylutz, R.raw.hoeraufzubohren, R.raw.ichchillhiernur,
+    /*5*/                           R.raw.ichsterbe, R.raw.krankesgereusch1, R.raw.krankesgereusch2, R.raw.krankesgereusch3, R.raw.krankesgereusch4,
+    /*5*/                           R.raw.krankesgereusch5, R.raw.krankesgereusch6, R.raw.krankesgereusch7, R.raw.krankesgereusch8, R.raw.krankesgereusch9,
+    /*5*/                           R.raw.lache1, R.raw.lache2, R.raw.lache3,
+    /*5*/                           R.raw.maoam, R.raw.nailedit, R.raw.ohhswag, R.raw.ohtoll, R.raw.rhentier,
+    /*5*/                           R.raw.slenderman, R.raw.sovieledias, R.raw.weggeknallt, R.raw.woopwoop,
+                                    R.raw.fluelingslollen,R.raw.geilnew, R.raw.gemuesenew, R.raw.haahundnew, R.raw.haakatze,
+    /*5*/                           R.raw.hahahahahanew, R.raw.heulnew, R.raw.hildegartnew, R.raw.ichboxdichgleich, R.raw.ichjetztoderwer,
+    /*5*/                           R.raw.ichschwoernew, R.raw.lachenew, R.raw.likenew, R.raw.ohpferdnew, R.raw.okesorrynew,
+    /*5*/                           R.raw.vachinanew, R.raw.yeahwaahnew, R.raw.xaufgewachtwegenhunger, R.raw.xdreissigklikes, R.raw.xdrohnediemanfliegenkann,
+    /*5*/                           R.raw.xduegeilerhengst, R.raw.xhdf, R.raw.xhoertihrmirnichtzu,
+    /*5*/                           R.raw.xhuhomg, R.raw.xkanndasbeimirmalkommen, R.raw.xkloeten, R.raw.xlache, R.raw.xnamnamnam,
+    /*5*/                           R.raw.xnaseabbeissen, R.raw.xthatsamuelleimer, R.raw.xuarwasistdasdenn, R.raw.xunterwebertet, R.raw.xuoaaar
 
-                                    };
-
-
-
-
+    };
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView=inflater.inflate(R.layout.kommentare,container,false);
+        View rootView=inflater.inflate(R.layout.lustiges,container,false);
 
-        layout=rootView.findViewById(R.id.kommentarelayout);
+        layout=rootView.findViewById(R.id.lustiges);
         File storage = Environment.getExternalStorageDirectory();
         directory = new File(storage.getAbsolutePath() +"/"+R.string.foldername+"/");
 //        soundfile=new File(directory, filename);
 
-        myGridView = (GridView)rootView.findViewById(R.id.kommentareGridView);
-        myGridView.setAdapter(new CustomGridAdapter(getActivity(), items1));
+        myGridView = (GridView)rootView.findViewById(R.id.lustigesGridView);
+        myGridView.setAdapter(new Lustiges.CustomGridAdapter(getActivity(), items1));
         myGridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
@@ -121,7 +112,7 @@ File directory;
                             case 0:
                                 savefile(pos,true);
                                 Intent share = new Intent(Intent.ACTION_SEND);
-                                share.putExtra(Intent.EXTRA_STREAM, Uri.parse(Environment.getExternalStorageDirectory().toString() +"/"+R.string.foldername+"/"+ items1[position]+".mp3"));
+                                share.putExtra(Intent.EXTRA_STREAM, Uri.parse(Environment.getExternalStorageDirectory().toString()+"/"+R.string.foldername+"/"+ items1[position]+".mp3"));
                                 share.setType("audio/mp3");
                                 startActivity(Intent.createChooser(share, "Sound teilen über..."));
                                 break;
@@ -204,10 +195,10 @@ File directory;
 
                 @Override
                 public void onClick(View v) {
-                        if (context instanceof MainActivity) {
-                            ((MainActivity) context).kommentareItemClicked(position);
-                        }
 
+                        if (context instanceof MainActivity) {
+                            ((MainActivity) context).lustigesItemClicked(position);
+                        }
 
                 }
             });
@@ -264,7 +255,6 @@ File directory;
             builder = new AlertDialog.Builder(getContext(), AlertDialog.THEME_HOLO_LIGHT);
 
         }
-
         builder.setItems(new CharSequence[]{"Klingelton", "Nachrichtenton", "Alarmton"}, new DialogInterface.OnClickListener(){
 
             @Override
@@ -323,7 +313,6 @@ File directory;
             if(MainActivity.isTesting){
                 Toast.makeText(getContext(),"Sound Saved", Toast.LENGTH_SHORT).show();
             }
-
             // Log the name of the sound that is being saved
             Log.e("Saving sound ","#############");
 

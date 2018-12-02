@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    tools:context="com.greenwoods.productions.concraftersoundboard.MainActivity"
+    tools:context="com.rift.games.concraftersoundboard.MainActivity"
 
     android:id="@+id/kommentarelayout">
 

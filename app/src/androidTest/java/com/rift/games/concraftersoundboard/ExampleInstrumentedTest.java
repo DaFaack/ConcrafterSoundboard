@@ -1,4 +1,4 @@
-package com.greenwoods.productions.concraftersoundboard;
+package com.rift.games.concraftersoundboard;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

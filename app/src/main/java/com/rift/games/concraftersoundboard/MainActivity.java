@@ -1,4 +1,4 @@
-package com.greenwoods.productions.concraftersoundboard;
+package com.rift.games.concraftersoundboard;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,9 +19,9 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.greenwoods.productions.concraftersoundboard.tabs.Lustiges;
-import com.greenwoods.productions.concraftersoundboard.tabs.Kommentare;
-import com.greenwoods.productions.concraftersoundboard.tabs.Sprüche;
+import com.rift.games.concraftersoundboard.tabs.Lustiges;
+import com.rift.games.concraftersoundboard.tabs.Kommentare;
+import com.rift.games.concraftersoundboard.tabs.Sprüche;
 
 import java.io.File;
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         isTesting=false;
 
-        final File FILES_PATH = new File(Environment.getExternalStorageDirectory(), "Android/data/com.penta.games.concraftersoundboard/files");
+        final File FILES_PATH = new File(Environment.getExternalStorageDirectory(), "Android/data/com.rift.games.concraftersoundboard/files");
 
 
         if (Environment.MEDIA_MOUNTED.equals(
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 if(menuItem.getItemId() == R.id.teilen){
                     Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
-                    shareIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.greenwoods.productions.concraftersoundboard");
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.rift.games.concraftersoundboard");
                     startActivity(Intent.createChooser(shareIntent,  "Teilen über..."));
                 }
 

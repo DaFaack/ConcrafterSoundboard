@@ -1,4 +1,4 @@
-package com.greenwoods.productions.concraftersoundboard;
+package com.rift.games.concraftersoundboard;
 
 import org.junit.Test;
 

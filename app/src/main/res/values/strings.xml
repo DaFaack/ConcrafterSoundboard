@@ -1,23 +1,17 @@
 <resources>
-    <string name="app_name">Concrafter Soundboard - Pro</string>
+    <string name="app_name">Concrafter Soundboard</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
     <string name="interstitial_ad_frequency">2</string>
-    <string name="banner_ad_unit_id">ca-app-pub-6906000706399183/1101765628</string>
-    <string name="interstitial_ad_unit_id">ca-app-pub-6906000706399183/6900887211</string>
-
-
-    <string name="foldername">concrafterpro</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="foldername">concrafter</string>
 
     <string name="msgForPremium">Hol dir die Premium Version um neue Sounds zu bekommen</string>
 
-    <string name="rechtliches"> <b>INFO:</b>\n
- Das Soundboard wurde nicht von ConCrafter erstellt, sondern von Fans von ihm.\nFalls er etwas gegen dieses Soundboard einzuwenden hat, sind wir jederzeit bereit es offline zu nehmen und stehen ihm bei Fragen, über Email, zur Verfügung.
-
-\n\n
- <b>Impressum:</b>\nMica Grünewald\n\n\nmicagrnwld@gmail.com</string>
+    <string name="rechtliches">This unofficial Soundboard wasn\'t produced by Concrafter/Luca, but by some of his supporters. If Luca has an issue with this app, please get in contact with us and we will delete it immediately.\n\n<b>Imprint/Contact:</b>\nJordie.abel98@gmail.com</string>
 
 
 

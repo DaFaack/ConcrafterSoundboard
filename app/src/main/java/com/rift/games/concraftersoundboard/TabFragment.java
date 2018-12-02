@@ -1,4 +1,4 @@
-package com.greenwoods.productions.concraftersoundboard;
+package com.rift.games.concraftersoundboard;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,9 +14,9 @@ import android.view.ViewGroup;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-import com.greenwoods.productions.concraftersoundboard.tabs.Lustiges;
-import com.greenwoods.productions.concraftersoundboard.tabs.Kommentare;
-import com.greenwoods.productions.concraftersoundboard.tabs.Sprüche;
+import com.rift.games.concraftersoundboard.tabs.Lustiges;
+import com.rift.games.concraftersoundboard.tabs.Kommentare;
+import com.rift.games.concraftersoundboard.tabs.Sprüche;
 
 /**
  * Created by Ratan on 7/27/2015.
@@ -61,7 +61,7 @@ public class TabFragment extends Fragment {
 
                         AdRequest adRequest = new AdRequest.Builder().build();
                         mInterstitialAd = new InterstitialAd(getContext());
-                        mInterstitialAd.setAdUnitId(getText(R.string.interstitial_ad_unit_id) + "");
+                        mInterstitialAd.setAdUnitId(getText(R.string.interstitial_ad_unit_id).toString());
                         mInterstitialAd.loadAd(adRequest);
 
                         tab_change_counter = 0;
@@ -139,7 +139,7 @@ public class TabFragment extends Fragment {
     public void interstitital_ad(){
         adRequest = new AdRequest.Builder().build();
         mInterstitialAd = new InterstitialAd(getContext());
-        mInterstitialAd.setAdUnitId(getText(R.string.interstitial_ad_unit_id) + "");
+        mInterstitialAd.setAdUnitId(getText(R.string.interstitial_ad_unit_id).toString());
         mInterstitialAd.loadAd(adRequest);
         mInterstitialAd.setAdListener(new AdListener() {
             @Override

@@ -1,4 +1,4 @@
-package com.greenwoods.productions.concraftersoundboard.tabs;
+package com.rift.games.concraftersoundboard.tabs;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -29,8 +29,8 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.greenwoods.productions.concraftersoundboard.MainActivity;
-import com.greenwoods.productions.concraftersoundboard.R;
+import com.rift.games.concraftersoundboard.MainActivity;
+import com.rift.games.concraftersoundboard.R;
 
 import java.io.File;
 import java.io.FileOutputStream;
